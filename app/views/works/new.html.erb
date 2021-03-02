@@ -1,0 +1,23 @@
+<%= form_with(model: @work, local: true) do |form| %>
+  <% if @work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+      <ul>
+      <% @work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <div class="field">
+     <label>追加する家事を入力してください</label>
+    </div>
+    <div class="text-field">
+     <%= form.text_field :name %>
+    </div>
+  <div class="actions">
+    <%= form.submit '追加' %>
+  </div>
+<% end %>

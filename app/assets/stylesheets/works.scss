@@ -1,3 +1,47 @@
 // Place all the styles related to the works controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-color: #FFEFD5;
+}
+
+.header-menus {
+    display: flex;
+    background-color: #FFA07A;
+    height: 60px;
+    width: 100%;
+    float: right;
+    padding-top: 20px;
+    padding-left: 80%;
+    word-spacing: 50px;
+    
+}
+.header-menus li {
+    padding-right: 20px;
+}
+
+ul {
+    list-style: none;
+}
+.header-menus a {
+    text-decoration: none;
+    color: #FFF;
+}
+.header-menus a:hover {
+    color: #F5F5F5;
+}
+
+//---------/works/new-----------//
+.add {
+    text-align: right;
+    padding-top: 8%;
+    padding-right: 59px;
+    font-size: 17px;
+}
+.add a {
+    text-decoration: none;
+    color: #666666;
+}
+.add a:hover {
+    color: #808080;
+}

@@ -1,0 +1,24 @@
+<%= form_with(model: @home, local: true) do |form| %>
+  <% if @home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% @home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <div class="field">
+     <label>家庭の名前を入力してください</label>
+    </div>
+    <div class="text-field">
+     <%= form.text_field :name %>
+    </div>
+  <div class="actions">
+    <%= form.submit '登録' %>
+  </div>
+  <%= link_to("家庭への招待","/invites")%>
+<% end %>
