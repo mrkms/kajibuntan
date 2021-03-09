@@ -4,10 +4,5 @@ Rails.application.routes.draw do
 resources :works
 resources :invites
 resources :homes
-resources :users
-
-
-
-
-post "works/create", to: "works#create"
+post "works/index", to: "works#create"
 end

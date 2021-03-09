@@ -10,14 +10,23 @@
       </ul>
     </div>
   <% end %>
-  
-    <div class="field">
-     <label>追加する家事を入力してください</label>
-    </div>
-    <div class="text-field">
-     <%= form.text_field :name %>
-    </div>
+
+  <div class="text-field">
+    <%= form.label "名前" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="text-field">
+    <%= form.label "ポイント" %>
+    </%>
+    <%= form.text_field :point %>
+  </div>
+  <div class= "text-field">
+    <%= form.label "担当" %>
+    <%= form.text_field :user_id %>
+  </div>
+
   <div class="actions">
-    <%= form.submit '追加' %>
+    <%= form.submit "登録" %>
   </div>
 <% end %>

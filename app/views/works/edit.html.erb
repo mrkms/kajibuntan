@@ -1,0 +1,32 @@
+<%= form_with(model: @work, local: true) do |form| %>
+  <% if @work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+      <ul>
+      <% @work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="text-field">
+    <%= form.label "名前" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="text-field">
+    <%= form.label "ポイント" %>
+    </%>
+    <%= form.text_field :point %>
+  </div>
+  <div class= "text-field">
+    <%= form.label "担当" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録" %>
+  </div>
+<% end %>
