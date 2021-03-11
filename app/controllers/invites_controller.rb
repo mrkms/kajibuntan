@@ -1,9 +1,13 @@
 class InvitesController < ApplicationController
-    def index
-      @invites = Invit.all
-    end
  
     def new
-      @invit = Invit.new
     end
+    
+    def create
+    メールアドレスでユーザーを検索
+    find_byを使う
+    カラム追加
+    end
+    
+    
 end

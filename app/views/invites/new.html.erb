@@ -1,15 +1,5 @@
-<%= form_with(model: @invit, local: true) do |form| %>
-  <% if @invit.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@invit.errors.count, "error") %> prohibited this invit from being saved:</h2>
-
-      <ul>
-      <% @invit.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= new_invite_path %>
+<%= form_with(url: invites_path,local: true) do |form| %>
   
     <div class="field">
      <label>招待される方のメールアドレスを入力してください</label>
@@ -20,3 +10,4 @@
   <div class="actions">
     <%= form.submit '招待' %>
   </div>
+  <% end %>
