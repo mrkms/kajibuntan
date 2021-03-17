@@ -1,12 +1,14 @@
 <div class="add">
    <%= link_to("家事の追加", "/works/new") %>
 </div>
+   
    <div class="name-point">
      <% @works.each do |work| %>
    <li>
      <%= work.name %>
      <%= work.point %>
-     <%= link_to("編集","/works/edit") %>
+     <%= "pt" %>
+     <%= link_to "編集", edit_work_path(work) %>
     </li>
    <% end %>
    </div>

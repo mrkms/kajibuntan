@@ -18,12 +18,12 @@
 
   <div class="text-field">
     <%= form.label "ポイント" %>
-    </%>
     <%= form.text_field :point %>
+    <%= "pt" %>
   </div>
   <div class= "text-field">
     <%= form.label "担当" %>
-    <%= form.text_field :user_id %>
+    <%= form.select :user_id,[] %>
   </div>
 
   <div class="actions">
